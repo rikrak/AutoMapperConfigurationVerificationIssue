@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapperVerifyMappings", "AutoMapperVerifyMappings\AutoMapperVerifyMappings.csproj", "{A33A1A74-529A-4EFA-AECE-D5DECAE5BC9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapperVerifyMappings.Tests.Unit", "AutoMapperVerifyMappings.Tests.Unit\AutoMapperVerifyMappings.Tests.Unit.csproj", "{9566CF96-7994-4C2A-9A4A-A00CE95F87C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A33A1A74-529A-4EFA-AECE-D5DECAE5BC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A33A1A74-529A-4EFA-AECE-D5DECAE5BC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A33A1A74-529A-4EFA-AECE-D5DECAE5BC9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9566CF96-7994-4C2A-9A4A-A00CE95F87C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9566CF96-7994-4C2A-9A4A-A00CE95F87C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9566CF96-7994-4C2A-9A4A-A00CE95F87C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9566CF96-7994-4C2A-9A4A-A00CE95F87C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

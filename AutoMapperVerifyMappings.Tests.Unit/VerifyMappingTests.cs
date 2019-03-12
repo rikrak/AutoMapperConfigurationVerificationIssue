@@ -5,7 +5,7 @@ using AutoMapperVerifyMappings.Models;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace AutoMapperVerifyMappings.Tests
+namespace AutoMapperVerifyMappings.Tests.Unit
 {
     [TestClass]
     public class VerifyMappingTests
