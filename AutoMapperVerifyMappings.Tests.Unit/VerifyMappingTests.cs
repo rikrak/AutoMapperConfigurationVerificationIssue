@@ -42,7 +42,7 @@ namespace AutoMapperVerifyMappings.Tests.Unit
 
             var source = new MainViewModel()
             {
-                EffectiveFrom = effectiveFromDate,
+                //EffectiveFrom = effectiveFromDate,
                 Item = new ReferenceViewModel()
                 {
                     Id = itemId,
@@ -55,8 +55,8 @@ namespace AutoMapperVerifyMappings.Tests.Unit
             var actual = mapper.Map<MainModel>(source);
 
             // assert
-            actual.Id.Should().Be(DataConstants.UndefinedId);
-            actual.EffectiveFrom.Should().Be(effectiveFromDate);
+            //actual.Id.Should().Be(DataConstants.UndefinedId);
+            //actual.EffectiveFrom.Should().Be(effectiveFromDate);
             actual.ItemId.Should().Be(itemId);
         }
 
@@ -68,7 +68,7 @@ namespace AutoMapperVerifyMappings.Tests.Unit
 
             var source = new MainViewModel()
             {
-                EffectiveFrom = effectiveFromDate,
+                //EffectiveFrom = effectiveFromDate,
                 Item = null
             };
             var mapper = _target.CreateMapper();
@@ -77,8 +77,8 @@ namespace AutoMapperVerifyMappings.Tests.Unit
             var actual = mapper.Map<MainModel>(source);
 
             // assert
-            actual.Id.Should().Be(DataConstants.UndefinedId);
-            actual.EffectiveFrom.Should().Be(effectiveFromDate);
+            //actual.Id.Should().Be(DataConstants.UndefinedId);
+           //actual.EffectiveFrom.Should().Be(effectiveFromDate);
             actual.ItemId.Should().Be(DataConstants.UndefinedId);
         }
     }

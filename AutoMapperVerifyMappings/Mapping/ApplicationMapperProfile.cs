@@ -9,9 +9,11 @@ namespace AutoMapperVerifyMappings.Mapping
         public ApplicationMapperProfile()
         {
             this.CreateMap<MainViewModel, MainModel>()
-                .ForMember(m => m.EffectiveFrom, opts => opts.MapFrom((vm, cmd) => vm.EffectiveFrom ?? DateTime.UtcNow))
-                .ForMember(m => m.ItemId, opts => opts.MapFrom<ResolveNullableIdFromReferenceModel, ReferenceViewModel>(vm => vm.Item))
-                .ForMember(m => m.Id, opts => opts.MapFrom(vm => DataConstants.UndefinedId));
+                //.ForMember(m => m.EffectiveFrom, opts => opts.MapFrom((vm, cmd) => vm.EffectiveFrom ?? DateTime.UtcNow))
+
+                // this does not appear to be recognised by the AssertConfigurationIsValid() method
+                .ForMember(m => m.ItemId, opts => opts.MapFrom<ResolveNullableIdFromReferenceModel, ReferenceViewModel>(vm => vm.Item));
+            //.ForMember(m => m.Id, opts => opts.MapFrom(vm => DataConstants.UndefinedId));
 
         }
     }
