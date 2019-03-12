@@ -5,12 +5,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AutoMapperVerifyMappings.Tests.Unit
 {
     [TestClass]
-    public class VerifyMappingTests : VerifyMappingTestBase
+    public class VerifyMappingUsingWorkaroundTests : VerifyMappingTestBase
     {
         protected override MapperConfiguration BuildTarget()
         {
             var mce = new ApplicationMapperConfigurationExpression();
-            mce.AddProfile(typeof(ApplicationMapperProfile));
+            mce.AddProfile(typeof(ApplicationMapperProfileWorkaround));
 
             return new MapperConfiguration(mce);
 

@@ -9,12 +9,18 @@ namespace AutoMapperVerifyMappings.Mapping
         public ApplicationMapperProfile()
         {
             this.CreateMap<MainViewModel, MainModel>()
-                //.ForMember(m => m.EffectiveFrom, opts => opts.MapFrom((vm, cmd) => vm.EffectiveFrom ?? DateTime.UtcNow))
-
                 // this does not appear to be recognised by the AssertConfigurationIsValid() method
                 .ForMember(m => m.ItemId, opts => opts.MapFrom<ResolveNullableIdFromReferenceModel, ReferenceViewModel>(vm => vm.Item));
-            //.ForMember(m => m.Id, opts => opts.MapFrom(vm => DataConstants.UndefinedId));
+        }
+    }
 
+    public class ApplicationMapperProfileWorkaround : Profile
+    {
+        public ApplicationMapperProfileWorkaround()
+        {
+            this.CreateMap<MainViewModel, MainModel>()
+                // this uses the overload that uses a string to specify the Property name to read the source data from
+                .ForMember(m => m.ItemId, opts => opts.MapFrom<ResolveNullableIdFromReferenceModel, ReferenceViewModel>(nameof(MainViewModel.Item)));
         }
     }
 }
